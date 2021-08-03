@@ -1,5 +1,6 @@
 package com.example.sunnyweatherbykotlin.ui.place
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel

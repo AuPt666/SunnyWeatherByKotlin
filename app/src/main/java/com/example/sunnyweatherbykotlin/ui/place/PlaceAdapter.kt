@@ -1,17 +1,14 @@
 package com.example.sunnyweatherbykotlin.ui.place
 
-import android.text.Layout
 import android.view.LayoutInflater
-import android.view.TextureView
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sunnyweatherbykotlin.R
 import com.example.sunnyweatherbykotlin.logic.model.Place
 
-class PlaceAdapter(private  val fragment: Fragment, private val placeList: List<Place>): RecyclerView.Adapter<PlaceAdapter.ViewHolder>() {
+class PlaceAdapter(private val fragment: PlaceFragment, private val placeList: List<Place>) : RecyclerView.Adapter<PlaceAdapter.ViewHolder>() {
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val placeName: TextView = view.findViewById(R.id.placeName)
@@ -19,7 +16,7 @@ class PlaceAdapter(private  val fragment: Fragment, private val placeList: List<
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.place_item, parent, false)
+        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.place_item, parent, false)
         return ViewHolder(view)
     }
 

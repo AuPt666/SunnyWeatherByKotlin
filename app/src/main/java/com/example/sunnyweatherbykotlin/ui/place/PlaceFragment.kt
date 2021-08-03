@@ -47,12 +47,12 @@ class PlaceFragment : Fragment(){
             }
         }
         viewModel.placeLiveData.observe(viewLifecycleOwner, androidx.lifecycle.Observer { result ->
-            val place = result.getOrNull()
-            if (place  != null) {
+            val places = result.getOrNull()
+            if (places  != null) {
                 recyclerView.visibility = View.VISIBLE
                 bgImageView.visibility = View.GONE
                 viewModel.placeList.clear()
-                viewModel.placeList.addAll(place)
+                viewModel.placeList.addAll(places)
                 adapter.notifyDataSetChanged()
             } else {
                 android.widget.Toast.makeText(activity, "未能查询到任何地方", android.widget.Toast.LENGTH_LONG).show()

@@ -29,6 +29,13 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    signingConfigs{
+        debug{
+            v2SigningEnabled false;
+        }
+    }
+
 }
 
 dependencies {
@@ -40,7 +47,6 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
-    implementation 'com.goole.android.material:material:1.0.0'
     implementation 'com.squareup.retrofit2:retrofit:2.6.1'
     implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1"
