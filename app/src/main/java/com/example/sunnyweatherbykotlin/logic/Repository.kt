@@ -3,6 +3,7 @@ package com.example.sunnyweatherbykotlin.logic
 import android.content.Context
 import android.util.Log
 import androidx.lifecycle.liveData
+import com.example.sunnyweatherbykotlin.logic.dao.PlaceDao
 import com.example.sunnyweatherbykotlin.logic.model.Place
 import com.example.sunnyweatherbykotlin.logic.model.Weather
 import com.example.sunnyweatherbykotlin.logic.network.SunnyWeatherNetwork
@@ -47,5 +48,12 @@ object Repository {
         }
         emit(result)
     }
+
+    fun savePlace(place: Place) = PlaceDao.savePlace(place)
+
+    fun getSavePlace(): Place = PlaceDao.getSavePlace()
+
+    fun isPlaceSaved(): Boolean = PlaceDao.isPlaceSaved()
+
 
 }

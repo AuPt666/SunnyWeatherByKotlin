@@ -19,4 +19,10 @@ class PlaceViewModel : ViewModel(){
     fun searchPlaces(query: String){
         searchLiveData.value = query
     }
+
+    fun savePlace(place: Place) = Repository.savePlace(place)
+
+    fun getSavePlace(): Place = Repository.getSavePlace()
+
+    fun isPlaceSaved(): Boolean = Repository.isPlaceSaved()
 }

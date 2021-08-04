@@ -2,7 +2,7 @@ package com.example.sunnyweatherbykotlin.logic.model
 
 import com.example.sunnyweatherbykotlin.R
 
-class Sky(val info: String, val icon: Int, val bg: Int) {
+class Sky(val info: String, val icon: Int, val bg: Int)
 
     private val sky = mapOf(
         "CLEAR_DAY" to Sky("晴", R.drawable.ic_clear_day, R.drawable.bg_clear_day),
@@ -29,7 +29,5 @@ class Sky(val info: String, val icon: Int, val bg: Int) {
         "DUST" to Sky("浮尘", R.drawable.ic_fog, R.drawable.bg_fog),
     )
 
-    fun getSky(skycon: String): Sky {
-        return sky[skycon] ?: sky["CLEAR_DAY"]!!
-    }
-}
+fun getSky(skycon: String): Sky {
+    return sky[skycon] ?: sky["CLEAR_DAY"]!! }

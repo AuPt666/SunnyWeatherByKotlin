@@ -9,9 +9,9 @@ import com.example.sunnyweatherbykotlin.logic.model.Location
 class WeatherViewModel: ViewModel() {
     private val locationLiveData = MutableLiveData<Location>()
 
-    val locationLng = ""
-    val locationLat = ""
-    val placeName = ""
+    var locationLng = ""
+    var locationLat = ""
+    var placeName = ""
 
     val weatherLiveData = Transformations.switchMap(locationLiveData) { location ->
         Repository.refreshWeather(location.lng, location.lat)

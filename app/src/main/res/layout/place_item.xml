@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="130dp"
     android:layout_margin="12dp"
-    app:cardCornerRadius="4dp">
+    app:cardCornerRadius="4dp"
+    android:theme="@style/Theme.MaterialComponents.DayNight">
 
     <LinearLayout
         android:orientation="vertical"
@@ -30,6 +31,5 @@
             android:textSize="14sp"/>
 
     </LinearLayout>
-
 
 </com.google.android.material.card.MaterialCardView>
